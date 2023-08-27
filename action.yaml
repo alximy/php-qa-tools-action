@@ -1,0 +1,11 @@
+name: 'PHP QA Tools'
+description: 'Run PHP QA Tools'
+inputs:
+    command:
+        description: 'Command to run'
+        required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.command }}
